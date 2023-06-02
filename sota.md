@@ -18,7 +18,8 @@ conda create -n mighty python=3.8
 - Get latest `label-studio`
 
 ```shell
-git clone https://github.com/heartexlabs/label-studio.git
+git clone https://github.com/garvan2021/label-studio.git
+git checkout zjw
 cd label-studio
 ```
 
@@ -34,6 +35,8 @@ python label_studio/manage.py collectstatic
 - Activate `label-studio`
 
 ```shell
+# Set max number files to 1000
+
 # Set max upload file size to 5GB
 export DATA_UPLOAD_MAX_MEMORY_SIZE=$((5*1000*1024*1024))
 python label_studio/manage.py runserver
