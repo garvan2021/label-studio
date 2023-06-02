@@ -1,0 +1,17 @@
+<View>
+  <Image name="image" value="$image" zoom="true"/>
+  <BrushLabels name="tag" toName="image">
+    <Label value="aluminum" background="#FFA39E"/>
+    <Label value="can" background="#D4380D"/>
+    <Label value="apacitance" background="#FFC069"/>
+    <Label value="car_plate" background="#AD8B00"/>
+    <Label value="copper" background="#D3F261"/>
+    <Label value="foam" background="#389E0D"/>
+    <Label value="painted_metal" background="#5CDBD3"/>
+    <Label value="pcb" background="#096DD9"/>
+    <Label value="rubber" background="#ADC6FF"/>
+    <Label value="sponge" background="#9254DE"/>
+    <Label value="tube" background="#F759AB"/>
+    <Label value="wire" background="#FFA39E"/>
+  </BrushLabels>
+</View>

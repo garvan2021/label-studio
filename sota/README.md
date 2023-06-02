@@ -42,4 +42,5 @@ python label_studio/manage.py runserver
 
 ### 2. Do annotation
 
-[document](https://labelstud.io/guide/get_started.html#Quick-start)
+- [documentation](https://labelstud.io/guide/get_started.html#Quick-start)
+- [template](template.xml)
