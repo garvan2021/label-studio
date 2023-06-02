@@ -15,7 +15,7 @@ conda create -n mighty python=3.8
 
 ### 1. Install [label-studio](https://labelstud.io/) locally
 
-- Get latest `label-studio`
+- get latest `label-studio`
 
 ```shell
 git clone https://github.com/garvan2021/label-studio.git
@@ -23,7 +23,7 @@ git checkout zjw
 cd label-studio
 ```
 
-- Install `label-studio`
+- install `label-studio`
 
 ```shell
 conda activate mighty
@@ -32,15 +32,31 @@ python label_studio/manage.py migrate
 python label_studio/manage.py collectstatic
 ```
 
-- Activate `label-studio`
+- activate `label-studio`
 
 ```shell
-# Set max upload file size to 5GB
-export DATA_UPLOAD_MAX_MEMORY_SIZE=$((5*1000*1024*1024))
+# Set data root
+export LABEL_STUDIO_LOCAL_FILES_SERVING_ENABLED=true
+export LABEL_STUDIO_LOCAL_FILES_DOCUMENT_ROOT=/home/jawen
 python label_studio/manage.py runserver
 ```
 
-### 2. Do annotation
+### 2. build project
 
-- [documentation](https://labelstud.io/guide/get_started.html#Quick-start)
-- [template](template.xml)
+Follow [official guidence](https://labelstud.io/guide/setup_project.html).
+
+### 3. Import coco
+
+- convert coco json file to label-studio format
+
+```shell
+label-studio-converter import coco -i coco-anno.json -o output.json
+```
+
+> after script finished, you will get `output.json` and `config.xml`
+
+- Import bellow files to project
+
+  - raw images
+  - config.xml
+  - output.json
